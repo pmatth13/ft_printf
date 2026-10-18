@@ -1,6 +1,4 @@
-#include <unistd.h>
-#include <stdarg.h>
-#include <stdio.h>
+#include "ft_printf.h"
 
 int	ft_sum(int n, ...)
 {
@@ -23,6 +21,7 @@ int	ft_sum(int n, ...)
 int main(void)
 {
 	int	total;
+	int	test;
 
 	total = ft_sum(3, 10, 20, 12);
 	printf("Le total est: %d\n", total);
@@ -34,6 +33,10 @@ int main(void)
 	printf("Le total est: %d\n", total);
 	total = ft_sum(2, 1.5, 2.5);
 	printf("Le total est: %d\n", total);
+
+	test = printf("Lit %d : %s\n", 12, "Dupont");
+	printf("Test: %d\n", test);
+	printf("%ld\n", ft_strlen("Dupont"));
 
 	return (0);
 }

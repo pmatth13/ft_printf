@@ -14,18 +14,23 @@
 
 int ft_printf(const char *str, ...)
 {
-	int	i;
-	int	count;
+	int		i;
+	int		count;
+	va_list	ap;
 
 	i = 0;
 	count = 0;
+	va_start(ap, str);
 	while (str[i])
 	{
 		if (str[i] == '%' && str[i + 1] == '\0')
+		{
+			va_end(ap);
 			return (-1);
+		}
 		else if (str[i] == '%')
 		{
-			count = count + ft_conversion(str[i + 1]);
+			count = count + ft_conversion(va_arg(ap, char *),str[i + 1]);
 			i++;
 		}
 		else
@@ -35,5 +40,6 @@ int ft_printf(const char *str, ...)
 		}
 		i++;
 	}
+	va_end(ap);
 	return (count);
 }

@@ -30,7 +30,7 @@ int ft_printf(const char *str, ...)
 		}
 		else if (str[i] == '%')
 		{
-			count = count + ft_conversion(va_arg(ap, char *),str[i + 1]);
+			count = count + ft_conversion(&ap, str[i + 1]);
 			i++;
 		}
 		else

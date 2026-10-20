@@ -6,13 +6,14 @@
 /*   By: psaudell <psaudell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 18:05:22 by psaudell          #+#    #+#             */
-/*   Updated: 2026/10/20 18:23:33 by psaudell         ###   ########.fr       */
+/*   Updated: 2026/10/20 18:46:33 by psaudell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-/* Fonction qui permet de respecter la norme, affiche une adresse et renvoi le nombre de caracteres ecrits dans le cas %p */
+/* Fonction qui permet de respecter la norme, affiche une adresse et renvoi le 
+	nombre de caracteres ecrits dans le cas %p */
 
 static int	ft_ret_nb_c(void *ptr)
 {

@@ -12,16 +12,14 @@
 
 #include "ft_printf.h"
 
-/* Fonction qui permet de respecter la norme, affiche nb_c quand on se trouve
-	dans le cas %p */
+/* Fonction qui permet de respecter la norme, affiche une adresse et renvoi le nombre de caracteres ecrits dans le cas %p */
 
-static int	ft_put_nb_c(va_list *ap)
+static int	ft_ret_nb_c(void *ptr)
 {
 	int	nb_c;
 
 	nb_c = ft_putstr_pf("0x");
-	nb_c = nb_c + ft_base_pf((unsigned long) va_arg(*ap, void *),
-			"0123456789abcdef");
+	nb_c = nb_c + ft_base_pf((unsigned long) ptr, "0123456789abcdef");
 	return (nb_c);
 }
 
@@ -47,6 +45,6 @@ int	ft_conversion(va_list *ap, char c)
 	else if (c == 'X')
 		nb_c = ft_base_pf(va_arg(*ap, unsigned int), "0123456789ABCDEF");
 	else if (c == 'p')
-		nb_c = ft_put_nb_c(ap);
+		nb_c = ft_ret_nb_c(va_arg(*ap, void *));
 	return (nb_c);
 }

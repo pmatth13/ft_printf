@@ -18,5 +18,8 @@ int	ft_printf(const char *, ...);
 int	ft_conversion(va_list *ap, char c);
 int	ft_putnbr_pf(int nb);
 int	ft_putstr_pf(char *str);
+int	ft_base_pf(unsigned int nb, char *base);
+int	ft_putchar_pf(char c);
+int	ft_putadd_pf(unsigned int nb);
 
 #endif

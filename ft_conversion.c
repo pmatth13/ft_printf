@@ -11,7 +11,7 @@ int	ft_conversion(va_list *ap, char c)
 	else if (c == 's')
 	{
 		str = va_arg(*ap, char *);
-		nb_c = ft_putstr_pf(ft_putstr_fd(va_arg(*ap, char *), 1));
+		nb_c = ft_putstr_pf(va_arg(*ap, char *));
 	}
 	else if (c == 'p')
 	{

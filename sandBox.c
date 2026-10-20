@@ -20,7 +20,7 @@ int	ft_sum(int n, ...)
 
 int main(void)
 {
-	int	total;
+	/* int	total;
 	int	test;
 
 	total = ft_sum(3, 10, 20, 12);
@@ -36,7 +36,9 @@ int main(void)
 
 	test = printf("Lit %d : %s\n", 12, "Dupont");
 	printf("Test: %d\n", test);
-	printf("%ld\n", ft_strlen("Dupont"));
+	printf("%ld\n", ft_strlen("Dupont")); */
+
+	printf("%zu %zu\n", sizeof(void *), sizeof(unsigned long));
 
 	return (0);
 }

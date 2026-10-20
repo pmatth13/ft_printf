@@ -1,4 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_conversion.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: psaudell <psaudell@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/20 18:05:22 by psaudell          #+#    #+#             */
+/*   Updated: 2026/10/20 18:23:33 by psaudell         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
+
+/* Fonction qui permet de respecter la norme, affiche nb_c quand on se trouve
+	dans le cas %p */
+
+static int	ft_put_nb_c(va_list *ap)
+{
+	int	nb_c;
+
+	nb_c = ft_putstr_pf("0x");
+	nb_c = nb_c + ft_base_pf((unsigned long) va_arg(*ap, void *),
+			"0123456789abcdef");
+	return (nb_c);
+}
+
+/* Fonction d'aiguillage pour diriger le bon caractere apres le '%' */
 
 int	ft_conversion(va_list *ap, char c)
 {
@@ -20,9 +47,6 @@ int	ft_conversion(va_list *ap, char c)
 	else if (c == 'X')
 		nb_c = ft_base_pf(va_arg(*ap, unsigned int), "0123456789ABCDEF");
 	else if (c == 'p')
-	{
-		nb_c = ft_putstr_pf("0x");
-		nb_c = nb_c + ft_base_pf((unsigned long) va_arg(*ap, void*), "0123456789abcdef");
-	}
+		nb_c = ft_put_nb_c(ap);
 	return (nb_c);
 }

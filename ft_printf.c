@@ -6,13 +6,13 @@
 /*   By: psaudell <psaudell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 00:15:14 by psaudell          #+#    #+#             */
-/*   Updated: 2026/10/19 00:35:46 by psaudell         ###   ########.fr       */
+/*   Updated: 2026/10/20 18:06:58 by psaudell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	int		i;
 	int		count;

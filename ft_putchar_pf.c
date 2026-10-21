@@ -6,7 +6,7 @@
 /*   By: psaudell <psaudell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 13:41:11 by psaudell          #+#    #+#             */
-/*   Updated: 2026/10/21 20:04:49 by psaudell         ###   ########.fr       */
+/*   Updated: 2026/10/21 22:50:42 by psaudell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_putchar_pf(char c)
 	return (1);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	c;
 	int 	test;
@@ -33,4 +33,4 @@ int	main(void)
 	
 
 	return (0);
-}
+}*/

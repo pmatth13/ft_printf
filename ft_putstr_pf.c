@@ -6,7 +6,7 @@
 /*   By: psaudell <psaudell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 13:36:35 by psaudell          #+#    #+#             */
-/*   Updated: 2026/10/21 21:29:09 by psaudell         ###   ########.fr       */
+/*   Updated: 2026/10/21 22:49:02 by psaudell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_putstr_pf(char *str)
 	printf("Test de mon ft_pustr_pf :\n");
 	ft_putstr_pf(str);
 	
-	/*printf("Test du printf origine :\n");
+	printf("Test du printf origine :\n");
 	test = printf("%s", str2);
 	printf("%d\n", test);
 	printf("Test de mon ft_pustr_pf :\n");

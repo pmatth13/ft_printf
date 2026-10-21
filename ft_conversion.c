@@ -6,7 +6,7 @@
 /*   By: psaudell <psaudell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 18:05:22 by psaudell          #+#    #+#             */
-/*   Updated: 2026/10/20 18:46:33 by psaudell         ###   ########.fr       */
+/*   Updated: 2026/10/21 22:45:54 by psaudell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static int	ft_ret_nb_c(void *ptr)
 {
 	int	nb_c;
 
+	if (ptr == NULL)
+		return (ft_putstr_pf("(nil)"));
 	nb_c = ft_putstr_pf("0x");
 	nb_c = nb_c + ft_base_pf((unsigned long) ptr, "0123456789abcdef");
 	return (nb_c);

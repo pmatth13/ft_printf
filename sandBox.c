@@ -24,7 +24,6 @@ int main(void)
 	int test;
 
 	str = NULL;
-	test = 0;
 	/* int	total;
 	int	test;
 
@@ -43,8 +42,8 @@ int main(void)
 	printf("Test: %d\n", test);
 	printf("%ld\n", ft_strlen("Dupont")); */
 
-	printf("%zu %zu\n", sizeof(void *), sizeof(unsigned long));
-	test = printf("%s\n", str);
-	printf("%d\n", test);
+	//printf("%zu %zu\n", sizeof(void *), sizeof(unsigned long));
+	test = printf("%s", str);
+	printf("%d", test);
 	return (0);
 }

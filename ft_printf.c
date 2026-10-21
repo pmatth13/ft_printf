@@ -6,7 +6,7 @@
 /*   By: psaudell <psaudell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 00:15:14 by psaudell          #+#    #+#             */
-/*   Updated: 2026/10/21 22:58:07 by psaudell         ###   ########.fr       */
+/*   Updated: 2026/10/21 23:16:40 by psaudell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_printf(const char *str, ...)
 			i++;
 		}
 		else
-			count = ft_putchar_pf(str[i]);
+			count += ft_putchar_pf(str[i]);
 		i++;
 	}
 	va_end(ap);

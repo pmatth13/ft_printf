@@ -6,7 +6,7 @@
 /*   By: psaudell <psaudell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 00:15:03 by psaudell          #+#    #+#             */
-/*   Updated: 2026/10/19 00:35:27 by psaudell         ###   ########.fr       */
+/*   Updated: 2026/10/21 23:17:33 by psaudell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FT_PRINTF_H
 # include "./libft/libft.h"
 
-int	ft_printf(const char *, ...);
+int	ft_printf(const char *str, ...);
 int	ft_conversion(va_list *ap, char c);
 int	ft_putnbr_pf(int nb);
 int	ft_putstr_pf(char *str);
